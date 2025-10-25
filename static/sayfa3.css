@@ -172,3 +172,74 @@ input::placeholder {
   width: 24px;
   height: 24px;
 }
+/* ------------------ Mobil uyumlu ayarlar ------------------ */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .left {
+        gap: 15px;
+    }
+
+    .madalyon {
+        width: 150px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .text h2 {
+        font-size: 24px;
+    }
+
+    .text h1 {
+        font-size: 32px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        padding: 10px 25px;
+    }
+
+    .form-container {
+        padding: 20px 25px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .submit-btn {
+        padding: 8px;
+    }
+
+    .icon-container {
+        gap: 10px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .title-box {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+}
+
