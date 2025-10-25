@@ -1,0 +1,198 @@
+.page2 {
+    position: relative;
+    min-height: 100vh;
+    background-color: #0f1925;
+    overflow: hidden;
+    font-family: 'Cinzel', serif;
+}
+
+/* Arka plan SVG */
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-pattern svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /* daha yumuşak görünüm */
+}
+
+/* Üst Menü */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.left-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #99763e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-circle img {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Ortadaki başlık kutusu */
+.title-box {
+    background-color: #99763e;
+    color: #0f1925;
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    padding: 10px 35px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Üye Ol kutusu */
+.member-box {
+    background-color: #99763e;
+    color: #0f1925;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.member-box:hover {
+    transform: scale(1.05);
+}
+
+/* Ana içerik */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2;
+    position: relative;
+    gap: 50px;
+    padding-top: 80px;
+}
+
+.madalyon-2 {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.university {
+    color: #43341b;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.club {
+    color: #debf7f;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.welcome {
+    color: #ffffff;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* --------------- Mobil uyumlu ayarlar --------------- */
+@media (max-width: 768px) {
+
+    .main-content {
+        flex-direction: column;   /* dikey hizala */
+        gap: 20px;
+        padding-top: 100px;
+        height: auto;
+    }
+
+    .text-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .madalyon-2 {
+        width: 200px;  /* görsel küçült */
+        height: 200px;
+    }
+
+    .title-box, .member-box {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .university {
+        font-size: 28px;
+    }
+
+    .club {
+        font-size: 40px;
+    }
+
+    .welcome {
+        font-size: 16px;
+    }
+
+    .left-icons {
+        gap: 10px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
