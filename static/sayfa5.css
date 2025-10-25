@@ -199,3 +199,70 @@ body {
   font-weight: bold;
   margin: 10px 0;
 }
+/* ------------------ Mobil uyumlu ayarlar ------------------ */
+@media (max-width: 768px) {
+    .info-section {
+        padding: 40px 20px;
+    }
+
+    .info-section h1 {
+        font-size: 24px;
+    }
+
+    .middle-icons {
+        flex-direction: column;
+        gap: 40px; /* ikonlar arası boşluk küçüldü */
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon-bg img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .title-box {
+        font-size: 16px;
+        padding: 6px 15px;
+    }
+
+    .bottom-medallion {
+        flex-direction: column;
+        gap: 10px;
+        bottom: 15px;
+    }
+
+    .bottom-medallion img {
+        width: 80px;
+    }
+
+    .text h2 {
+        font-size: 28px;
+    }
+
+    .text h1 {
+        font-size: 36px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .member-box {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
