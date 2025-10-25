@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DU Alumni Club</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sayfa2.css') }}">
+</head>
+<body class="page2">
+
+    <!-- Arka plan: ince çizgili asimetrik üçgenler -->
+    <div class="bg-pattern">
+        <img src="{{ url_for('static', filename='back.PNG') }}" class="bg-pattern" alt="bg-pattern">
+    </div>
+
+    <!-- Üst Menü -->
+    <header class="header">
+        <div class="left-icons">
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa2") }}"'>
+                <img src="{{ url_for('static', filename='anasayfa.PNG') }}" alt="Ana Sayfa">
+            </div>
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa4") }}"'>
+                <img src="{{ url_for('static', filename='info.PNG') }}" alt="Bilgi">
+            </div>
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa5") }}"'>
+                <img src="{{ url_for('static', filename='mail.PNG') }}" alt="Mail">
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="title-box">DU ALUMNI CLUB</div>
+        </div>
+
+        <div class="header-right">
+            <div class="member-box" onclick='window.location.href="{{ url_for("sayfa3") }}"'>ÜYE OLUN!</div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+        <img src="{{ url_for('static', filename='madalyon.png') }}" alt="Madalyon" class="madalyon-2">
+
+        <div class="text-group">
+            <h2 class="university">DUZCE UNIVERSITY</h2>
+            <h1 class="club">ALUMNI CLUB</h1>
+            <p class="welcome">Düzce Üniversitesi’nin En Prestijli Topluluğuna Hoşgeldiniz!</p>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-color: #0f1925;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+       width: 100%;
+    height: 100%;
+    body {
+    margin: 0;
+    background-color: #0f1925;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+ 
+}
+
+
+
+.arka1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 650px; /* Görselin boyutunu isteğine göre ayarlayabilirsin */
+  transform: translate(-50%, -40%); /* biraz yukarıda olsun diye */
+  z-index: 1; /* madalyonun arkasında kalması için */
+  opacity: 0.9; /* istersen biraz saydamlık verebilirsin */
+}
+
+.madalyon {
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.madalyon:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.click-text {
+    color: #debf7f;
+ font-size: 1.1rem;
+    position: absolute;
+    bottom: 10px; /* Sayfanın altından 10px (yaklaşık 1 cm) yukarıda */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+}
+
+

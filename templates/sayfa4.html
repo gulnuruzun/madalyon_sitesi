@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DU Alumni Club</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sayfa4.css') }}">
+</head>
+<body class="page4">
+
+    <!-- Arka plan: ince çizgili asimetrik üçgenler -->
+    <div class="bg-pattern">
+        <img src="{{ url_for('static', filename='back.PNG') }}" class="bg-pattern" alt="bg-pattern">
+    </div>
+
+    <!-- Üst Menü -->
+    <header class="header">
+        <div class="left-icons">
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa2") }}"'>
+                <img src="{{ url_for('static', filename='anasayfa.PNG') }}" alt="Ana Sayfa">
+            </div>
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa4") }}"'>
+                <img src="{{ url_for('static', filename='info.PNG') }}" alt="Bilgi">
+            </div>
+            <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa5") }}"'>
+                <img src="{{ url_for('static', filename='mail.PNG') }}" alt="Mail">
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="title-box">DU ALUMNI CLUB</div>
+        </div>
+
+        <div class="header-right">
+            <div class="member-box" onclick='window.location.href="{{ url_for("sayfa3") }}"'>ÜYE OLUN!</div>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+       
+  <section class="about-section">
+    <h1>HAKKIMIZDA</h1>
+    <div class="fade-line"></div>
+
+    <div class="about-content">
+      <div class="left">
+        <h2>GENEL BİLGİLENDİRME</h2>
+        <p>
+          DU Alumni Club, 2025 yılında Düzce Üniversitesi çatısı altında kurulmuş prestijli bir öğrenci topluluğudur. Amacımız; öğrencilerimiz ile mezunlarımızı aynı çatı altında bir araya getirerek güçlü bir network, yüksek düzeyde bir aidiyet duygusu ve geleceğe yön veren bir vizyon oluşturmaktır.
+Topluluk bünyesinde; kariyer odaklı seminerler, mezun buluşmaları, akademik paneller, sosyal etkinlikler ve kültürel faaliyetler düzenlenir. Her üye, topluluğa katıldığı ilk andan itibaren “Junior Alumni” statüsünde yer alır; topluluğa sağladığı katkılar doğrultusunda ise “Asil Alumni” unvanı ile prestijli bir konuma yükselir.
+DU Alumni Club, yalnızca bir öğrenci topluluğu değil; geleceğin liderlerini, vizyon sahiplerini ve güçlü bağlarla birbirine bağlı bir camiayı inşa eden seçkin bir oluşumdur.
+  </p>
+      </div>
+
+      <div class="right">
+        <h2>VİZYONUMUZ</h2>
+        <p>
+        DU Alumni Club, Düzce Üniversitesi öğrencileri ve mezunları arasında güçlü bir köprü kurarak, prestijli ve seçkin bir topluluk olmayı; ulusal ve uluslararası ölçekte örnek gösterilen bir mezun-öğrenci ağına dönüşmeyi hedefler.
+        </p>
+
+        <h2>MİSYONUMUZ</h2>
+        <p>
+         Öğrencilerimizin akademik ve profesyonel gelişimlerine katkı sağlamak, mezunlarımızın deneyimlerini gelecek nesillere aktarmak ve üniversite çatısı altında kalıcı bir aidiyet duygusu inşa etmek. Bunu; kariyer buluşmaları, mentorluk programları, sosyal ve kültürel etkinliklerle gerçekleştirerek üyelerimizin hem kişisel hem de mesleki yolculuklarında yanında olmayı amaçlıyoruz.  </p>
+      </div>
+    </div>
+            <div class="bottom-medallion">
+                 <img src="{{ url_for('static', filename='madalyon.png') }}" alt="Madalyon" class="madalyon">
+        <div class="text">
+        <h2>DUZCE UNIVERSITY</h2>
+        <h1>ALUMNI CLUB</h1>
+      </div>
+    </div>
+    </main>
+
+</body>
+</html>

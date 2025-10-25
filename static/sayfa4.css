@@ -1,0 +1,172 @@
+
+body {
+  margin: 0;
+  background-color: #0f1925;
+  font-family: 'Cinzel', serif;
+  overflow: hidden;
+  color: white;
+}
+
+/* Arka plan SVG */
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-pattern svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4; /* daha yumuşak görünüm */
+}
+
+/* Üst Menü */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.left-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #99763e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-circle img {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Ortadaki başlık kutusu */
+.title-box {
+    background-color: #99763e;
+    color: #0f1925;
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    padding: 10px 35px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Üye Ol kutusu */
+.member-box {
+    background-color: #99763e;
+    color: #0f1925;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.member-box:hover {
+    transform: scale(1.05);
+}
+
+
+.about-section {
+  color: #debf7f;
+   font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 60px 100px;
+}
+
+/* Başlık */
+.about-section h1 {
+  color: #debf7f;
+   font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+}
+
+.fade-line {
+  width: 200px;
+  height: 2px;
+  margin: 10px auto 40px;
+  background: linear-gradient(to right, transparent, #debf7f, transparent);
+}
+
+/* İki sütun düzeni */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.about-content .left,
+.about-content .right {
+  flex: 1;
+}
+
+.about-content h2 {
+  color: #debf7f;
+   font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.about-content p {
+ color: white;
+   font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
+}
+
+/* Alt madalyon bölümü */
+.bottom-medallion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.bottom-medallion img {
+  width: 100px;
+  height: auto;
+}
+
+
+.text h2 {
+  color: #43341b;
+  font-family: 'Cinzel', serif;
+  font-size: 33px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text h1 {
+  color: #debf7f;
+  font-family: 'Cinzel', serif;
+  font-size: 44px;
+  font-weight: bold;
+  margin: 10px 0;
+}

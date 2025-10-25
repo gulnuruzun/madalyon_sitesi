@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Üye Olun - DU Alumni Club</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='sayfa3.css') }}">
+</head>
+<body>
+  <div class="background-lines">
+     <img src="{{ url_for('static', filename='back.PNG') }}" class="background-lines" alt="background-lines">
+  </div>
+
+  <!-- Üst kısım -->
+  <header>
+    <div class="icon-container">
+      <a href="{{ url_for('sayfa2') }}" class="icon-circle">
+        <img src="{{ url_for('static', filename='anasayfa.PNG') }}" alt="Anasayfa">
+      </a>
+      <a href="{{ url_for('sayfa4') }}" class="icon-circle">
+        <img src="{{ url_for('static', filename='info.PNG') }}" alt="Bilgi">
+      </a>
+      <a href="{{ url_for('sayfa5') }}" class="icon-circle">
+        <img src="{{ url_for('static', filename='mail.PNG') }}" alt="Mail">
+      </a>
+    </div>
+
+    <div class="title-box">DU ALUMNI CLUB</div>
+  </header>
+
+  <!-- Ana içerik -->
+  <main>
+    <div class="left">
+      <img src="{{ url_for('static', filename='madalyon.png') }}" alt="Madalyon" class="madalyon">
+      <div class="text">
+        <h2>DUZCE UNIVERSITY</h2>
+        <h1>ALUMNI CLUB</h1>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-title">ÜYE OLUN!</div>
+      <div class="form-container">
+     <form action="{{ url_for('sayfa3') }}" method="post">
+  <input name="name" placeholder="*Ad - Soyad:" required>
+  <input name="email" type="email" placeholder="*E-Mail:" required>
+  <input name="phone" placeholder="*Tel:">
+  <input name="student_no" placeholder="Öğrenci No:">
+  <button type="submit" class="submit-btn">
+    <img src="{{ url_for('static', filename='buton.PNG') }}" alt="Gönder">
+  </button>
+</form>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

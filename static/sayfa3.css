@@ -1,0 +1,174 @@
+
+body {
+  margin: 0;
+  background-color: #0f1925;
+  font-family: 'Cinzel', serif;
+  overflow: hidden;
+  color: white;
+}
+
+/* Arka plan çizgileri (2. sayfadakiyle aynı) */
+.background-lines {
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Üst başlık */
+header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+/* Üstteki ikonlar */
+.icon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #99763e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon-circle:hover {
+  background-color: #cda757;
+}
+
+.icon-circle img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Başlık kutusu */
+.title-box {
+  background-color: #99763e;
+  color: #0f1925;
+  border-radius: 15px;
+  padding: 10px 30px;
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Ana kısım */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 5;
+  position: relative;
+  gap: 120px;
+}
+
+/* Sol kısım (madalyon + yazı) */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.madalyon {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.text h2 {
+  color: #43341b;
+  font-size: 33px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text h1 {
+  color: #debf7f;
+  font-size: 44px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Form kısmı */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  background-color: #99763e;
+  color: #0f1925;
+  border-radius: 20px;
+  padding: 12px 40px;
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Form kutusu */
+.form-container {
+  background-color: #99763e;
+  border-radius: 25px;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  background-color: #debf7f;
+  color: #0f1925;
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #99763e;
+}
+
+.submit-btn {
+  background-color: #debf7f;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #cda757;
+}
+
+.submit-btn img {
+  width: 24px;
+  height: 24px;
+}

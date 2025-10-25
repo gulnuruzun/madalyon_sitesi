@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Paneli</title>
+  <style>
+    body {
+      background-color: #0f1925;
+      color: white;
+      font-family: 'Cinzel', serif;
+      padding: 40px;
+    }
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      background-color: #1b2a38;
+      color: #debf7f;
+    }
+    th, td {
+      border: 1px solid #99763e;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #99763e;
+      color: #0f1925;
+    }
+    a.logout {
+      color: #debf7f;
+      float: right;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Paneli</h1>
+  <a href="{{ url_for('admin_logout') }}" class="logout">Çıkış Yap</a>
+  
+  {% if users %}
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>İsim</th>
+      <th>E-posta</th>
+      <th>Telefon</th>
+      <th>Öğrenci No</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td>{{ user[0] }}</td>
+      <td>{{ user[1] }}</td>
+      <td>{{ user[2] }}</td>
+      <td>{{ user[3] }}</td>
+      <td>{{ user[4] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>Henüz kayıtlı kullanıcı yok.</p>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DU Alumni Club</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='sayfa5.css') }}">
+</head>
+<body class="page5">
+
+  <div class="bg-pattern">
+    <img src="{{ url_for('static', filename='back.PNG') }}" class="bg-pattern" alt="bg-pattern">
+  </div>
+
+  <header class="header">
+    <div class="left-icons">
+      <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa2") }}"'>
+        <img src="{{ url_for('static', filename='anasayfa.PNG') }}" alt="Ana Sayfa">
+      </div>
+      <div class="icon-circle" onclick='window.location.href="{{ url_for("sayfa4") }}"'>
+        <img src="{{ url_for('static', filename='info.PNG') }}" alt="Bilgi">
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="title-box">DU ALUMNI CLUB</div>
+    </div>
+
+    <div class="header-right">
+      <div class="member-box" onclick='window.location.href="{{ url_for("sayfa3") }}"'>ÜYE OLUN!</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="info-section">
+      <h1>İLETİŞİM</h1>
+      <div class="fade-line"></div>
+
+      <div class="middle-icons">
+        <div class="icon-circle">
+          <div class="icon-bg">
+            <img src="{{ url_for('static', filename='mail.PNG') }}" alt="mail">
+          </div>
+          <div class="title-box">dualumniclub@gmail.com</div>
+        </div>
+
+        <div class="icon-circle">
+          <div class="icon-bg">
+            <img src="{{ url_for('static', filename='insta.PNG') }}" alt="insta">
+          </div>
+          <div class="title-box">@du.alumniclub</div>
+        </div>
+
+        <div class="icon-circle">
+          <div class="icon-bg">
+            <img src="{{ url_for('static', filename='konum.PNG') }}" alt="konum">
+          </div>
+          <div class="title-box">Düzce Üniversitesi Kampüsü</div>
+        </div>
+      </div>
+
+      <div class="bottom-medallion">
+        <img src="{{ url_for('static', filename='madalyon.png') }}" alt="Madalyon" class="madalyon">
+        <div class="text">
+          <h2>DUZCE UNIVERSITY</h2>
+          <h1>ALUMNI CLUB</h1>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
