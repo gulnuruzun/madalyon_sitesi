@@ -1,3 +1,8 @@
+html, body {
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 body {
     margin: 0;
     background-color: #0f1925;
