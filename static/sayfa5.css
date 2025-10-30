@@ -221,6 +221,11 @@ body {
         gap: 40px; /* ikonlar arası boşluk küçüldü */
         top: 55%;
         transform: translate(-50%, -50%);
+   display: flex;
+  justify-content: center; /* ortalar */
+  align-items: center;
+  flex-wrap: wrap; /* küçük ekranda taşarsa alta iner */
+  text-align: center;
     }
 
     .icon-bg img {
