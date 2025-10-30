@@ -170,22 +170,22 @@ body {
   letter-spacing: 1px;
 }
 
-
 .bottom-medallion {
   position: relative;
-  bottom: 20px;
-  left: 50%;
-    transform: translateX(-50%);
-  display: flex; /* madalyon üstte, yazılar altta olur */
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 10px;
+  margin-top: 100px;   /* içerikten sonra boşluk */
+  margin-bottom: 40px; /* alt kenardan boşluk */
 }
 
 .bottom-medallion img {
   width: 100px;
   height: auto;
 }
+
 
 
 .text h2 {
@@ -230,15 +230,16 @@ body {
         padding: 6px 15px;
     }
 
-    .bottom-medallion {
-        flex-direction: column;
-        gap: 10px;
-        bottom: 15px;
-    }
+   .bottom-medallion {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 
-    .bottom-medallion img {
-        width: 80px;
-    }
+  .bottom-medallion img {
+    width: 80px;
+  }
 
     .text h2 {
         font-size: 28px;
