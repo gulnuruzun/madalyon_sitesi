@@ -117,15 +117,18 @@ body {
   background: linear-gradient(to right, transparent, #debf7f, transparent);
 }
 .middle-icons {
- position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 280px; /* ikonlar arası boşluk */
+  gap: 280px;
+  flex-wrap: wrap; /* taşma olmasın */
+  margin-top: 200px; /* sayfanın ortasına sabitleme yerine boşluk ver */
+  position: relative; /* artık absolute değil */
+  transform: none;
+  left: auto;
+  top: auto;
 }
+
 
 /* Her ikon + yazı kutusu */
 .icon-circle {
