@@ -4,7 +4,16 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 app.secret_key = "duzce_university_secret_key"
-DB_FILE = "database.db"
+
+# use an absolute path so the sqlite file is always created next to this module
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DB_FILE = os.path.join(BASE_DIR, "database.db")
+
+def get_db_connection():
+    """Return a new database connection using the configured file path."""
+    conn = sqlite3.connect(DB_FILE)
+    # return rows as tuples; you can change row_factory if you want dictionaries
+    return conn
 
 # -------------------------------------------------
 # VERİTABANI OLUŞTURMA VE DEFAULT ADMIN
@@ -14,7 +23,7 @@ def create_database_and_admin():
     if os.path.exists(DB_FILE):
         return  # Veritabanı zaten var, işlem yapma
 
-    conn = sqlite3.connect(DB_FILE)
+    conn = get_db_connection()
     c = conn.cursor()
 
     # Üyeler tablosu
@@ -71,7 +80,7 @@ def sayfa3():
         if not name or not email:
             return "Ad ve E-mail zorunludur!", 400
 
-        conn = sqlite3.connect(DB_FILE)
+conn = get_db_connection()
         c = conn.cursor()
         c.execute("INSERT INTO users (name, email, phone, student_no) VALUES (?, ?, ?, ?)",
                   (name, email, phone, student_no))
@@ -98,7 +107,7 @@ def admin_login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        conn = sqlite3.connect(DB_FILE)
+conn = get_db_connection()
         c = conn.cursor()
         c.execute("SELECT password_hash FROM admin WHERE username=?", (username,))
         admin = c.fetchone()
@@ -119,7 +128,7 @@ def admin_panel():
     if 'admin' not in session:
         return redirect(url_for('admin_login'))
 
-    conn = sqlite3.connect(DB_FILE)
+    conn = get_db_connection()
     c = conn.cursor()
     c.execute("SELECT * FROM users")
     users = c.fetchall()
