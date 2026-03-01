@@ -141,4 +141,148 @@ html, body {
     margin-top: 10px;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .main-content {
+        gap: 30px;
+        padding-top: 100px;
+    }
 
+    .madalyon-2 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .university {
+        font-size: 32px;
+    }
+
+    .club {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .left-icons {
+        gap: 10px;
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-center {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-right {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-box {
+        font-size: 18px;
+        padding: 8px 25px;
+    }
+
+    .member-box {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .icon-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon-circle img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        height: auto;
+        gap: 25px;
+        padding-top: 140px;
+        padding-bottom: 30px;
+    }
+
+    .madalyon-2 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .text-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .university {
+        font-size: 28px;
+    }
+
+    .club {
+        font-size: 40px;
+    }
+
+    .welcome {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-box {
+        font-size: 16px;
+        padding: 6px 15px;
+        letter-spacing: 0px;
+    }
+
+    .member-box {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-circle img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main-content {
+        gap: 20px;
+        padding-top: 120px;
+    }
+
+    .madalyon-2 {
+        width: 140px;
+        height: 140px;
+    }
+
+    .university {
+        font-size: 22px;
+    }
+
+    .club {
+        font-size: 32px;
+    }
+
+    .welcome {
+        font-size: 13px;
+    }
+}

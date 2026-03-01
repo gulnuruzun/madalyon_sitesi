@@ -172,21 +172,72 @@ input::placeholder {
   background-color: #cda757;
 }
 
+/* Form kutusu */
+.form-container {
+  background-color: #99763e;
+  border-radius: 25px;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  background-color: #debf7f;
+  color: #0f1925;
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #99763e;
+}
+
+.submit-btn {
+  background-color: #debf7f;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #cda757;
+}
+
 .submit-btn img {
   width: 24px;
   height: 24px;
 }
-/* ------------------ Mobil uyumlu ayarlar ------------------ */
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    main {
+        gap: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
         gap: 20px;
         height: auto;
-        padding: 20px 0;
+        padding: 80px 20px 20px 20px;
     }
 
     .left {
         gap: 15px;
+        align-items: center;
     }
 
     .madalyon {
@@ -203,6 +254,10 @@ input::placeholder {
         font-size: 32px;
     }
 
+    .form-section {
+        width: 100%;
+    }
+
     .form-title {
         font-size: 20px;
         padding: 10px 25px;
@@ -210,11 +265,19 @@ input::placeholder {
 
     .form-container {
         padding: 20px 25px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    form {
+        width: 100%;
     }
 
     input {
         font-size: 14px;
         padding: 8px 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .submit-btn {
@@ -239,11 +302,54 @@ input::placeholder {
         flex-direction: column;
         align-items: center;
         padding: 10px;
+        gap: 10px;
     }
 
     .title-box {
         font-size: 18px;
         padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 100px;
+    }
+
+    .form-title {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .form-container {
+        padding: 15px 15px;
+    }
+
+    .madalyon {
+        width: 120px;
+    }
+
+    .text h2 {
+        font-size: 20px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .icon-circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon-circle img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .title-box {
+        font-size: 16px;
+        padding: 6px 15px;
     }
 }
 

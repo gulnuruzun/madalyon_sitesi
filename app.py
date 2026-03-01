@@ -10,9 +10,9 @@ DB_FILE = "database.db"
 # VERİTABANI OLUŞTURMA VE DEFAULT ADMIN
 # -------------------------------------------------
 def create_database_and_admin():
-    # Eğer eski veritabanı varsa silelim
+    # Yalnızca veritabanı yoksa oluştur
     if os.path.exists(DB_FILE):
-        os.remove(DB_FILE)
+        return  # Veritabanı zaten var, işlem yapma
 
     conn = sqlite3.connect(DB_FILE)
     c = conn.cursor()

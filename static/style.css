@@ -62,14 +62,64 @@ body {
 
 .click-text {
     color: #debf7f;
- font-size: 1.1rem;
+    font-size: 1.1rem;
     position: absolute;
-    bottom: 10px; /* Sayfanın altından 10px (yaklaşık 1 cm) yukarıda */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arka1 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        top: 20%;
+        opacity: 0.7;
+    }
+
+    .madalyon {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+    }
+
+    .click-text {
+        font-size: 0.9rem;
+        bottom: 20px;
+    }
 }
 
+@media (max-width: 480px) {
+    .arka1 {
+        width: 90%;
+        max-width: 300px;
+        opacity: 0.6;
+    }
 
+    .madalyon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .click-text {
+        font-size: 0.8rem;
+        bottom: 15px;
+    }
+}
