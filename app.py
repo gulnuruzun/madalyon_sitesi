@@ -80,7 +80,7 @@ def sayfa3():
         if not name or not email:
             return "Ad ve E-mail zorunludur!", 400
 
-conn = get_db_connection()
+        conn = get_db_connection()
         c = conn.cursor()
         c.execute("INSERT INTO users (name, email, phone, student_no) VALUES (?, ?, ?, ?)",
                   (name, email, phone, student_no))
@@ -107,7 +107,7 @@ def admin_login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-conn = get_db_connection()
+        conn = get_db_connection()
         c = conn.cursor()
         c.execute("SELECT password_hash FROM admin WHERE username=?", (username,))
         admin = c.fetchone()
