@@ -1,356 +1,112 @@
+/* sayfa5.css - cleaned and mobile-friendly */
 html, body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  overflow-y: auto;
   overflow-x: hidden;
-}
-body {
-  margin: 0;
   background-color: #0f1925;
+  color: #fff;
   font-family: 'Cinzel', serif;
-  overflow: hidden;
-  color: white;
 }
 
-/* Arka plan SVG */
-.bg-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.bg-pattern svg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.4; /* daha yumuşak görünüm */
-}
-
-/* Üst Menü */
+/* Fixed header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: rgba(15,25,37,0.6);
+  backdrop-filter: blur(4px);
 }
 
-.left-icons {
-    display: flex;
-    gap: 15px;
+.left-icons { display: flex; gap: 12px; }
+.icon-circle { 
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #99763e; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition: transform .2s ease;
 }
+.icon-circle img { width: 22px; height:22px; }
+.icon-circle:hover{ transform: scale(1.05); }
 
-.icon-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #99763e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+.header-center { display:flex; justify-content:center; align-items:center; flex:1; }
+.title-box { background:#99763e; color:#0f1925; padding:8px 18px; border-radius:18px; font-weight:700; }
+.header-right { margin-left: 12px; }
+.member-box { background:#99763e; color:#0f1925; padding:8px 14px; border-radius:18px; cursor:pointer; }
 
-.icon-circle img {
-    width: 25px;
-    height: 25px;
-}
+/* Main content area leaves space for header */
+.main-content { padding-top: 84px; }
 
-.icon-circle:hover {
-    transform: scale(1.1);
-}
-
+/* Info section */
 .info-section {
-  color: #debf7f;
-   font-family: 'Cinzel', serif;
+  padding: 48px 80px;
   text-align: center;
-  padding: 60px 100px;
-}
-/* Ortadaki başlık kutusu */
-.title-box {
-    background-color: #99763e;
-    color: #0f1925;
-    font-family: 'Cinzel', serif;
-    font-size: 22px;
-    padding: 10px 35px;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Üye Ol kutusu */
-.member-box {
-    background-color: #99763e;
-    color: #0f1925;
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    padding: 10px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.member-box:hover {
-    transform: scale(1.05);
-}
-
-
-/* Başlık */
-.info-section h1 {
   color: #debf7f;
-   font-family: 'Cinzel', serif;
-  letter-spacing: 3px;
 }
+.info-section h1 { font-size: 28px; margin-bottom: 8px; }
+.fade-line { width: 220px; height:2px; margin: 12px auto 30px; background: linear-gradient(90deg, transparent, #debf7f, transparent); }
 
-.fade-line {
-  width: 200px;
-  height: 2px;
-  margin: 10px auto 40px;
-  background: linear-gradient(to right, transparent, #debf7f, transparent);
-}
-.middle-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 280px;
-  flex-wrap: wrap; /* taşma olmasın */
-  margin-top: 200px; /* sayfanın ortasına sabitleme yerine boşluk ver */
-  position: relative; /* artık absolute değil */
-  transform: none;
-  left: auto;
-  top: auto;
-}
+/* Contact icons row */
+.middle-icons { display:flex; justify-content:center; align-items:center; gap: 120px; flex-wrap:wrap; margin-top: 30px; }
+.middle-icons .icon-circle { width: 72px; height:72px; }
+.middle-icons .icon-bg { width: 72px; height:72px; border-radius:50%; background:#99763e; display:flex; align-items:center; justify-content:center; }
+.middle-icons .icon-bg img { width:36px; height:36px; }
+.middle-icons .title-box { margin-top:8px; display:block; font-size:16px; padding:6px 12px; }
+.middle-icons .icon-circle { background: transparent; box-shadow:none; }
 
+/* Bottom medallion */
+.bottom-medallion { display:flex; justify-content:center; align-items:center; gap:18px; margin-top:48px; margin-bottom:40px; }
+.bottom-medallion img { width:100px; height:auto; }
+.text h2 { color:#43341b; font-size:28px; margin:0; }
+.text h1 { color:#debf7f; font-size:40px; margin:6px 0 0; }
 
-/* Her ikon + yazı kutusu */
-.icon-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* Dairenin kendisi */
-.icon-bg {
-  width: auto;
-  height: auto;
-  border-radius: 50%;
-  background-color: #99763e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0px; /* ikonla yazı arasında boşluk */
-}
-
-.icon-bg img {
-  width: 40px;
-  height: 40px;
-}
-
-.icon-circle:hover {
-  transform: scale(1.1);
-}
-
-/* Yazı kutusu */
-.title-box {
-  background-color: #99763e;
-  color: #0f1925;
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.bottom-medallion {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  margin-top: 100px;   /* içerikten sonra boşluk */
-  margin-bottom: 40px; /* alt kenardan boşluk */
-}
-
-.bottom-medallion img {
-  width: 100px;
-  height: auto;
-}
-
-
-
-.text h2 {
-  color: #43341b;
-  font-family: 'Cinzel', serif;
-  font-size: 43px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.text h1 {
-  color: #debf7f;
-  font-family: 'Cinzel', serif;
-  font-size: 54px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-/* Mobile Responsiveness */
+/* Desktop -> tablet adjustments */
 @media (max-width: 1024px) {
-    .info-section {
-        padding: 60px 50px;
-    }
-
-    .middle-icons {
-        gap: 200px;
-        margin-top: 150px;
-    }
+  .info-section { padding: 40px 48px; }
+  .middle-icons { gap: 80px; }
+  .bottom-medallion img { width:90px; }
+  .text h1 { font-size:36px; }
 }
 
+/* Tablet and large phones */
 @media (max-width: 768px) {
-    .info-section {
-        padding: 40px 20px;
-    }
-
-    .info-section h1 {
-        font-size: 24px;
-        margin-top: 20px;
-    }
-
-    .middle-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 30px;
-        margin-top: 80px;
-        margin-bottom: 20px;
-    }
-
-    .icon-bg img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .title-box {
-        font-size: 16px;
-        padding: 6px 15px;
-    }
-
-    .bottom-medallion {
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 60px;
-        margin-bottom: 30px;
-    }
-
-    .bottom-medallion img {
-        width: 80px;
-    }
-
-    .text h2 {
-        font-size: 28px;
-    }
-
-    .text h1 {
-        font-size: 36px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .left-icons {
-        gap: 10px;
-    }
-
-    .icon-circle {
-        width: 40px;
-        height: 40px;
-    }
-
-    .icon-circle img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .member-box {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
+  .header { padding: 10px 14px; }
+  .icon-circle { width:44px; height:44px; }
+  .icon-circle img { width:18px; height:18px; }
+  .title-box { padding:6px 12px; font-size:14px; }
+  .info-section { padding: 30px 20px; }
+  .info-section h1 { font-size:22px; }
+  .fade-line { width:160px; }
+  .middle-icons { gap: 40px; margin-top: 30px; }
+  .middle-icons .icon-bg { width:60px; height:60px; }
+  .middle-icons .icon-bg img { width:28px; height:28px; }
+  .middle-icons .title-box { font-size:14px; padding:5px 10px; }
+  .bottom-medallion { margin-top:36px; }
+  .bottom-medallion img { width:80px; }
+  .text h2 { font-size:20px; }
+  .text h1 { font-size:32px; }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
-    .info-section {
-        padding: 30px 15px;
-    }
-
-    .info-section h1 {
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-    .fade-line {
-        width: 150px;
-    }
-
-    .middle-icons {
-        gap: 20px;
-        margin-top: 50px;
-        margin-bottom: 15px;
-    }
-
-    .icon-bg {
-        width: 50px;
-        height: 50px;
-    }
-
-    .icon-bg img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .title-box {
-        font-size: 14px;
-        padding: 5px 12px;
-    }
-
-    .bottom-medallion {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-
-    .bottom-medallion img {
-        width: 70px;
-    }
-
-    .text h2 {
-        font-size: 22px;
-    }
-
-    .text h1 {
-        font-size: 32px;
-    }
-
-    .member-box {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
+  .header { flex-direction:row; gap:8px; }
+  .header-center { order: 2; }
+  .left-icons { order: 1; }
+  .header-right { order: 3; }
+  .main-content { padding-top: 76px; }
+  .info-section { padding: 22px 14px; }
+  .info-section h1 { font-size:18px; }
+  .fade-line { width:120px; }
+  .middle-icons { gap: 18px; margin-top: 18px; }
+  .middle-icons .icon-bg { width:50px; height:50px; }
+  .middle-icons .icon-bg img { width:24px; height:24px; }
+  .middle-icons .title-box { font-size:13px; padding:4px 8px; }
+  .bottom-medallion { flex-direction:column; gap:12px; margin-top:28px; }
+  .bottom-medallion img { width:70px; }
+  .text h2 { font-size:18px; }
+  .text h1 { font-size:26px; }
 }
-
