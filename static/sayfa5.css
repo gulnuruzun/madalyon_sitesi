@@ -38,8 +38,39 @@ html, body {
 .header-right { margin-left: 12px; }
 .member-box { background:#99763e; color:#0f1925; padding:8px 14px; border-radius:18px; cursor:pointer; }
 
-/* Main content area leaves space for header */
-.main-content { padding-top: 84px; }
+/* Background wrapper (holds bg image) */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.bg-pattern .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Main content area leaves space for header and sits above background */
+.main-content {
+  padding-top: 84px;
+  min-height: calc(100vh - 84px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
 
 /* Info section */
 .info-section {
